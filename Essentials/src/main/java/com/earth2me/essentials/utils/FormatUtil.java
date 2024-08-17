@@ -3,6 +3,7 @@ package com.earth2me.essentials.utils;
 import net.ess3.api.IUser;
 import org.bukkit.ChatColor;
 import org.bukkit.Color;
+import me.clip.placeholderapi.PlaceholderAPI;
 
 import java.util.EnumSet;
 import java.util.Locale;
@@ -78,7 +79,7 @@ public final class FormatUtil {
         if (!user.isAuthorized(permBase + ".url")) {
             message = FormatUtil.blockURL(message);
         }
-        return message;
+        return PlaceholderAPI.setPlaceholders(user, message);
     }
 
     //This method is used to simply replace the ess colour codes with minecraft ones, ie &c
