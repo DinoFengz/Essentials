@@ -79,7 +79,7 @@ public final class FormatUtil {
         if (!user.isAuthorized(permBase + ".url")) {
             message = FormatUtil.blockURL(message);
         }
-        return PlaceholderAPI.setPlaceholders(user, message);
+        return PlaceholderAPI.setPlaceholders(user.getBase(), message);
     }
 
     //This method is used to simply replace the ess colour codes with minecraft ones, ie &c
