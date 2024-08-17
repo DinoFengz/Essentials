@@ -4,6 +4,8 @@ plugins {
 
 repositories {
     gradlePluginPortal()
+    maven('https://repo.extendedclip.com/content/repositories/placeholderapi/')
+    
 }
 
 dependencies {
