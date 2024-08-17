@@ -1,11 +1,16 @@
 plugins {
     id("essentials.shadow-module")
 }
-
+repositories {
+    maven {
+        url = 'https://repo.extendedclip.com/content/repositories/placeholderapi/'
+    }
+}
 dependencies {
     compileOnly('com.github.milkbowl:VaultAPI:1.7') {
         exclude group: "org.bukkit", module: "bukkit"
     }
+    compileOnly 'me.clip:placeholderapi:2.11.6'
     compileOnly 'net.luckperms:api:5.3'
 
     api 'io.papermc:paperlib:1.0.6'
