@@ -5,6 +5,12 @@ plugins {
 group = "net.essentialsx"
 version = "2.21.0-SNAPSHOT"
 
+repositories {
+    maven {
+        url = 'https://repo.extendedclip.com/content/repositories/placeholderapi/'
+    }
+}
+
 project.ext {
     GIT_COMMIT = !indraGit.isPresent() ? "unknown" : indraGit.commit().abbreviate(7).name()
     GIT_DEPTH = GitUtil.commitsSinceLastTag(project)
